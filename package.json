@@ -1,0 +1,25 @@
+{
+  "name": "threejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "three": "^0.90.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "babel-loader": "^8.0.0-beta.0",
+    "concurrently": "^3.5.1",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.9",
+    "webpack-serve": "^0.1.4"
+  },
+  "scripts": {
+    "webpack": "webpack --mode development --config ./webpack.config.js --watch",
+    "serve": "browser-sync start --server --files 'js/app.js' --index index2.html",
+    "start": "concurrently 'npm run webpack' 'npm run serve'"
+  },
+  "author": "",
+  "license": "ISC"
+}
